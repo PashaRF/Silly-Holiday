@@ -70,6 +70,8 @@ namespace Silly_Holiday
         {
             SoundPlayer spaceMusic = new SoundPlayer(Properties.Resources.spaceMusic);
             spaceMusic.Play();
+
+            // earth drawn 
             g.DrawEllipse(oceanPen, 70, 30, 220, 220);
             g.FillEllipse(oceanBrush, 70, 30, 220, 220);
 
@@ -97,6 +99,7 @@ namespace Silly_Holiday
         }
         void Stars()
         {
+            // stars are drawn randomly according to grid 
             for (int i = 1; i <= 5; i++)
             {
                 for (int k = 1; k <= 4; k++)
@@ -147,6 +150,7 @@ namespace Silly_Holiday
         }
         void Rocket()
         {
+            //rocket blasts across sky in parabola
             int xRocket = 52;
             int yRocket = 330;
             int hRocket = 30;
@@ -233,6 +237,7 @@ namespace Silly_Holiday
 
         private void cardButton_Click(object sender, EventArgs e)
         {
+            // the earth + button disappears
             g.DrawEllipse(defaultPen, 70, 30, 220, 220);
             g.FillEllipse(defaultBrush, 70, 30, 220, 220);
             cardButton.Hide();
